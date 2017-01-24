@@ -1,5 +1,5 @@
-def subtotal_cal(price,quatity)
-	price.to_f * quatity.to_f
+def subtotal_cal(price,quantity)
+	price.to_f * quantity.to_f
 end
 
 def discount(grand_total)
@@ -19,18 +19,18 @@ def discount(grand_total)
 end				
 	def tax_rate(tax_code)
 	if tax_code == "UT"
-	tax_rate == 0.0685
+	tax_rate = 0.0685
 	elsif tax_code == "NV"
-		tax_rate == 0.08
+		tax_rate = 0.08
 	elsif tax_code == "TX"
-		tax_rate == 0.0625
+		tax_rate = 0.0625
 	elsif tax_code == "AL"
-		tax_rate == 0.04
+		tax_rate = 0.04
 	elsif tax_code == "CA"
-		tax_rate == 0.0825
+		tax_rate = 0.0825
 	end
 end
-quatity = 0
+quantity = 0
 price = 0
 subtotal = 0
 grand_total = 0
@@ -45,9 +45,9 @@ while continue == true
 	puts " please enter the price "
 	price = gets.chomp
 
-	puts " please enter the quatity "
+	puts " please enter the quantity "
 	quantity = gets.chomp
-
+    subtotal_cal(price,quantity)
 	if quantity.to_f == 0
 		continue = false
 	end
