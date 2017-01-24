@@ -49,7 +49,7 @@ while continue == true
 	quantity = gets.chomp
 
 	if quantity.to_f == 0
-		contibue = false
+		continue = false
 	end
 	puts "The quantity is = #{quantity}, and The price is = #{price} and The subtotal is = #{subtotal}"
 end
@@ -60,8 +60,8 @@ NV   Nevada
 TX   Texas
 AL   Alabama
 CA   California
-
-tax_code get.chomp.upcase
+"""
+tax_code = gets.chomp.upcase
 puts tax_code
 
 total_discount = discount(grand_total)
